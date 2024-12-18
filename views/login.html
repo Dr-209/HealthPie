@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="/public/other.css">
+    <link rel="stylesheet" href="/public/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script>
+        import {BASE_URL} from "./utils/config.js";
+
+        function runCode(){
+            data={email,password};
+
+            fetch(`${BASE_URL}/login`,{
+                method:"POST",
+                headers:{ 'Content-Type' : 'application/json'},
+                body:JSON.stringify(data)
+            }).then((res)=>{
+                console.log(res);
+                res.text();
+            });
+        }
+    </script> -->
+</head>
+
+<body>
+    <div id="login" class="log-in-form justify-center items-center flex flex-col h-screen font-sans
+    ">
+        <div class="login-form-container flex flex-col gap-6 items-center justify-center">
+            <h1 class="text-3xl text-[#393D3F] font-semibold max-sm:text-6xl">Login Form</h1>
+
+
+
+            <form method="post" action="login.html">
+                <div class="input-label flex flex-col ">
+                    <label class=" text-xl text-[#548C73]  max-sm:text-2xl" for="email">Email</label>
+                    <input required class="border-2 w-[30vw] h-10 outline-none border-[#D32243] rounded-xl sm:w-full "
+                        type="email" name="email">
+                </div>
+
+                <div class="input-label flex flex-col">
+                    <label class="text-[#548C73]  text-xl max-sm:text-2xl" for="password">Password</label>
+                    <input required class="border-2 w-[30vw] h-10 border-[#D32243] outline-none rounded-xl sm:w-full"
+                        type="password" name="password">
+                </div>
+
+                <div class="input-label flex flex-col">
+                    <label class="text-[#548C73] text-xl" for="role">Choose Your Role</label>
+
+                    <select onchange="Upload()" required
+                        class="text-xl  text-[#393D3F] border-2 w-[30vw] h-10 outline-none border-[#D32243] rounded-xl max-sm:w-full"
+                        name="role" id="role">
+                        <option value="User">User</option>
+                        <option value="Doctor">Doctor</option>
+                    </select>
+                </div>
+                <br><br>
+                <div class="diff-option">
+                    <p>new account ? <a href="signup.html">SIGNUP</a></p>
+                </div>
+
+        </div>
+
+        <button
+            class="w-max border-2 mt-10 px-3 py-1 rounded-2xl text-xl border-[#D32243] font-semibold text-[#D32243] hover:scale-105 transition-2s ">LOGIN</button>
+
+        </form>
+
+    </div>
+</body>
+
+</html>
